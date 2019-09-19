@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="640.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <BorderPane prefHeight="640.0" prefWidth="360.0" BorderPane.alignment="CENTER">
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <bottom>
+                        <Label fx:id="Label_TestBoardTool" text="测板工具" BorderPane.alignment="CENTER" />
+                     </bottom>
+                     <center>
+                        <ImageView fx:id="ImageView_TestBoardTool" fitHeight="80.0" fitWidth="80.0" onMouseClicked="#ImageView_TestBoardTool_MouseClicked" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../res/image/pcb.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </GridPane>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="语言 Language">
+                  <items>
+                    <MenuItem fx:id="MenuItem_CN" mnemonicParsing="false" onAction="#MenuItem_CN_MouseClicked" text="简体中文(CN)" />
+                        <MenuItem fx:id="MenuItem_TW" mnemonicParsing="false" onAction="#MenuItem_TW_MouseClicked" text="繁體中文(TW)" />
+                        <MenuItem fx:id="MenuItem_EN" mnemonicParsing="false" onAction="#MenuItem_EN_MouseClicked" text="English(EN)" />
+                        <MenuItem fx:id="MenuItem_OT1" mnemonicParsing="false" onAction="#MenuItem_OT1_MouseClicked" text="Other1(OT1)" />
+                        <MenuItem fx:id="MenuItem_OT2" mnemonicParsing="false" onAction="#MenuItem_OT2_MouseClicked" text="Other2(OT2)" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="关于 About">
+                  <items>
+                    <MenuItem fx:id="MenuItem_About" mnemonicParsing="false" onAction="#MenuItem_About_MouseClicked" text="关于" />
+                        <MenuItem fx:id="MenuItem_Changed" mnemonicParsing="false" onAction="#MenuItem_Changed_MouseClicked" text="版本变更记录" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </bottom>
+</BorderPane>
