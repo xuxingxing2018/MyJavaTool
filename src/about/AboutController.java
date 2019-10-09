@@ -22,7 +22,8 @@ public class AboutController {
 	
 	public void initialize() {
 		String s = 
-			"2019-09-19 xuxingxing2018 第一次建立github.\r\n 第二次上传推送";
+				"第二次上传推送" +
+			"2019-09-19 xuxingxing2018 第一次建立github.\r\n";
 		TextArea_VersionLog.setText(s);
 		//System.out.println(s);
 	}
