@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <TreeView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <FlowPane prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextArea layoutX="38.0" layoutY="63.0" prefHeight="271.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane layoutX="38.0" layoutY="8.0" prefHeight="271.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="功能1 Function1">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="6.0" layoutY="3.0" mnemonicParsing="false" text="复位 Reset 4630" />
+                                    <Button layoutX="6.0" layoutY="29.0" mnemonicParsing="false" text="读版本 GetVersion 5030" />
+                                    <Button layoutX="6.0" layoutY="55.0" mnemonicParsing="false" text="校时 SetDateTime 4130" />
+                                    <Button layoutX="6.0" layoutY="81.0" mnemonicParsing="false" text="读序列号 GetSN 4B30" />
+                                    <Button layoutX="6.0" layoutY="107.0" mnemonicParsing="false" text="初始化 InitParam 4C30" />
+                                    <Button layoutX="279.0" layoutY="19.0" mnemonicParsing="false" text="吸合继电器 RelayOn 4930" />
+                                    <Button layoutX="279.0" layoutY="45.0" mnemonicParsing="false" text="释放继电器 RelayOff 4A30" />
+                                    <Button layoutX="6.0" layoutY="185.0" mnemonicParsing="false" text="车位已满 NullLots 4345" />
+                                    <Button layoutX="6.0" layoutY="211.0" mnemonicParsing="false" text="车位有余 HaveLots 4346" />
+                                    <Button layoutX="6.0" layoutY="159.0" mnemonicParsing="false" text="手工落闸 SoftwareClose 4341" />
+                                    <Button layoutX="6.0" layoutY="133.0" mnemonicParsing="false" text="手工开闸 SoftwareOpen 4340" />
+                                    <Button layoutX="279.0" layoutY="71.0" mnemonicParsing="false" text="吸合指定时间后释放 RelayOnTimeToOff 4931" />
+                                    <CheckBox layoutX="285.0" layoutY="127.0" mnemonicParsing="false" text="1#继电器Relay" />
+                                    <CheckBox layoutX="285.0" layoutY="179.0" mnemonicParsing="false" text="3#继电器Relay" />
+                                    <CheckBox layoutX="285.0" layoutY="153.0" mnemonicParsing="false" text="2#继电器Relay" />
+                                    <CheckBox layoutX="285.0" layoutY="205.0" mnemonicParsing="false" text="4#继电器Relay" />
+                                    <Label layoutX="428.0" layoutY="101.0" text="吸合时间OnTime" />
+                                    <Label layoutX="279.0" layoutY="101.0" text="指定继电器SelectRelay" />
+                                    <TextField layoutX="429.0" layoutY="126.0" prefHeight="23.0" prefWidth="78.0" promptText="1-255" />
+                                    <TextField layoutX="429.0" layoutY="151.0" prefHeight="23.0" prefWidth="78.0" promptText="1-255" />
+                                    <TextField layoutX="429.0" layoutY="176.0" prefHeight="23.0" prefWidth="78.0" promptText="1-255" />
+                                    <TextField layoutX="429.0" layoutY="201.0" prefHeight="23.0" prefWidth="78.0" promptText="1-255" />
+                                    <Label layoutX="511.0" layoutY="130.0" text="* 100ms" />
+                                    <Label layoutX="511.0" layoutY="155.0" text="* 100ms" />
+                                    <Label layoutX="511.0" layoutY="181.0" text="* 100ms" />
+                                    <Label layoutX="511.0" layoutY="205.0" text="* 100ms" />
+                                    <TextField alignment="CENTER" layoutX="163.0" layoutY="211.0" prefHeight="23.0" prefWidth="78.0" promptText="0-9999" text="1234" />
+                                    <Line endX="197.0" layoutX="379.0" layoutY="4.0" startX="-119.0" stroke="BLUE" />
+                                    <Line layoutX="260.0" layoutY="4.0" startX="-0.5" startY="232.5" stroke="BLUE" />
+                                    <Line endX="197.0" layoutX="379.0" layoutY="237.0" startX="-119.0" stroke="BLUE" />
+                                    <Line layoutX="576.0" layoutY="4.0" startX="-0.5" startY="232.5" stroke="BLUE" />
+                                 </children>
+                              </AnchorPane>
+                           </content></Tab>
+                      <Tab text="功能2 Function2">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="6.0" layoutY="4.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="293.0" text="设置控制板模式和屏参 SetBoardMode 4131" />
+                                    <Button layoutX="301.0" layoutY="4.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="293.0" text="读取控制板模式和屏参 GetBoardMode 4132" />
+                                    <ComboBox layoutX="150.0" layoutY="30.0" prefWidth="150.0" />
+                                    <Label layoutX="6.0" layoutY="34.0" text="控制板模式 BoardMode :" />
+                                    <ComboBox layoutX="150.0" layoutY="56.0" prefWidth="150.0" />
+                                    <Label layoutX="6.0" layoutY="60.0" text="相机类型 CameraType :" />
+                                    <ComboBox layoutX="150.0" layoutY="82.0" prefWidth="150.0" />
+                                    <Label layoutX="6.0" layoutY="86.0" text="扫描方式 RefreshType :" />
+                                    <ComboBox layoutX="150.0" layoutY="108.0" prefWidth="150.0" />
+                                    <Label layoutX="6.0" layoutY="112.0" text="屏幕高度 ScreenHeight :" />
+                                    <ComboBox layoutX="150.0" layoutY="134.0" prefWidth="150.0" />
+                                    <Label layoutX="6.0" layoutY="138.0" text="屏幕宽度 ScreenWidth :" />
+                                    <ComboBox layoutX="150.0" layoutY="160.0" prefWidth="150.0" />
+                                    <Label layoutX="6.0" layoutY="164.0" text="OE极性 OeLinePolarity :" />
+                                    <ComboBox layoutX="150.0" layoutY="186.0" prefWidth="150.0" />
+                                    <Label layoutX="6.0" layoutY="190.0" text="数据极性 DataPolarity :" />
+                                    <ComboBox layoutX="150.0" layoutY="212.0" prefWidth="150.0" />
+                                    <Label layoutX="6.0" layoutY="216.0" text="色彩类型 ColorType :" />
+                                    <Button layoutX="317.0" layoutY="46.0" mnemonicParsing="false" text="设置其他参数 SetOtherParam 4134" />
+                                    <Button layoutX="317.0" layoutY="72.0" mnemonicParsing="false" text="读取其他参数 GetOtherParam 4137" />
+                                    <CheckBox layoutX="318.0" layoutY="99.0" mnemonicParsing="false" text="播报车牌号 ReadCarPlate" />
+                                    <CheckBox layoutX="318.0" layoutY="118.0" mnemonicParsing="false" text="3#控制器自动控制红绿灯 3#RelayTrafficLight" />
+                                    <CheckBox layoutX="318.0" layoutY="137.0" mnemonicParsing="false" text="满位接口透明转发 LucencyTransmit" />
+                                    <CheckBox layoutX="318.0" layoutY="156.0" mnemonicParsing="false" text="已废弃 Unused" />
+                                    <CheckBox layoutX="318.0" layoutY="175.0" mnemonicParsing="false" text="竖屏 ScreenVertical" />
+                                    <CheckBox layoutX="318.0" layoutY="194.0" mnemonicParsing="false" text="整屏颠倒 ScreenReversal" />
+                                    <CheckBox layoutX="318.0" layoutY="213.0" mnemonicParsing="false" text="扫描枪串口接卡机 RS232LinkCardMachine" />
+                                    <Line endX="115.7071533203125" endY="0.29290771484375" layoutX="477.0" layoutY="36.0" startX="-169.0" />
+                                    <Line endX="114.7928466796875" endY="0.20709228515625" layoutX="476.0" layoutY="232.0" startX="-169.0" />
+                                    <Line endX="107.5" endY="194.5" layoutX="484.0" layoutY="37.0" startX="108.0" />
+                                    <Line endX="107.5" endY="194.5" layoutX="200.0" layoutY="37.0" startX="108.0" />
+                                 </children></AnchorPane>
+                           </content></Tab>
+                        <Tab text="功能3 Function3">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="22.0" layoutY="5.0" text="预设闲时显示信息 Set Idle Display Information" />
+                                    <Button layoutX="309.0" layoutY="149.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="135.0" text="设置闲时屏显内容  SetIdleDisplayContent 423B" wrapText="true" />
+                                    <ComboBox layoutX="163.0" layoutY="28.0" prefWidth="132.0" />
+                                    <Label layoutX="22.0" layoutY="32.0" text="设置哪一行 Which Line :" />
+                                    <Label layoutX="22.0" layoutY="59.0" text="节目序号 ShowNumber :" />
+                                    <Label layoutX="22.0" layoutY="110.0" text="节目类型 ShowType :" />
+                                    <TextField alignment="CENTER" layoutX="163.0" layoutY="162.0" prefWidth="132.0" promptText="0.01-25.5" text="3.00" />
+                                    <ComboBox layoutX="163.0" layoutY="106.0" prefHeight="23.0" prefWidth="430.0" />
+                                    <RadioButton layoutX="179.0" layoutY="59.0" mnemonicParsing="false" text="0" />
+                                    <RadioButton layoutX="213.0" layoutY="59.0" mnemonicParsing="false" text="1" />
+                                    <RadioButton layoutX="249.0" layoutY="59.0" mnemonicParsing="false" text="2" />
+                                    <RadioButton layoutX="285.0" layoutY="59.0" mnemonicParsing="false" text="3" />
+                                    <RadioButton layoutX="324.0" layoutY="59.0" mnemonicParsing="false" text="4" />
+                                    <RadioButton layoutX="363.0" layoutY="59.0" mnemonicParsing="false" text="5" />
+                                    <RadioButton layoutX="401.0" layoutY="59.0" mnemonicParsing="false" text="6" />
+                                    <RadioButton layoutX="439.0" layoutY="59.0" mnemonicParsing="false" text="7" />
+                                    <RadioButton layoutX="179.0" layoutY="84.0" mnemonicParsing="false" text="8" />
+                                    <RadioButton layoutX="213.0" layoutY="84.0" mnemonicParsing="false" text="9" />
+                                    <RadioButton layoutX="249.0" layoutY="84.0" mnemonicParsing="false" text="10" />
+                                    <RadioButton layoutX="285.0" layoutY="84.0" mnemonicParsing="false" text="11" />
+                                    <RadioButton layoutX="324.0" layoutY="84.0" mnemonicParsing="false" text="12" />
+                                    <RadioButton layoutX="363.0" layoutY="84.0" mnemonicParsing="false" text="13" />
+                                    <RadioButton layoutX="401.0" layoutY="84.0" mnemonicParsing="false" text="14" />
+                                    <RadioButton layoutX="439.0" layoutY="84.0" mnemonicParsing="false" text="15" />
+                                    <Label layoutX="22.0" layoutY="220.0" text="文字颜色 FontColor :" />
+                                    <Label layoutX="22.0" layoutY="138.0" text="显示方式 DisplayType :" />
+                                    <ComboBox layoutX="163.0" layoutY="134.0" prefWidth="132.0" />
+                                    <Label layoutX="22.0" layoutY="165.0" text="显示时间 DispTime(s) :" />
+                                    <TextField alignment="CENTER" layoutX="163.0" layoutY="190.0" prefWidth="132.0" promptText="1" text="1" />
+                                    <Label layoutX="22.0" layoutY="193.0" text="滚动次数 CycleCount :" />
+                                    <Button layoutX="453.0" layoutY="149.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="135.0" text="读取闲时屏显内容  GetIdleDisplayContent 423C" wrapText="true" />
+                                    <ComboBox layoutX="163.0" layoutY="217.0" prefWidth="132.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="功能4 Function4">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="570.0" text="下载字库文件 DownloadFontFile 4133" />
+                                    <Button layoutX="14.0" layoutY="82.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="570.0" text="下载音源文件 DownloadMusicBinFile 4136" />
+                                    <ProgressBar layoutX="14.0" layoutY="59.0" prefHeight="18.0" prefWidth="570.0" progress="0.0" />
+                                    <ProgressBar layoutX="14.0" layoutY="134.0" prefHeight="18.0" prefWidth="570.0" progress="0.0" />
+                                    <TextField layoutX="13.0" layoutY="33.0" prefHeight="23.0" prefWidth="572.0" />
+                                    <TextField layoutX="14.0" layoutY="108.0" prefHeight="23.0" prefWidth="570.0" />
+                                    <Button layoutX="14.0" layoutY="158.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="570.0" text="更新主板固件（谨慎操作） DownloadProgramBinFile(Warning:Just For Manager)" />
+                                    <ProgressBar layoutX="14.0" layoutY="210.0" prefHeight="18.0" prefWidth="570.0" progress="0.0" />
+                                    <TextField layoutX="14.0" layoutY="184.0" prefHeight="23.0" prefWidth="570.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="功能5 Function5">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="6.0" layoutY="4.0" mnemonicParsing="false" text="请等待确认 PleaseWait 4330" />
+                                    <Button layoutX="183.0" layoutY="4.0" mnemonicParsing="false" text="账户未注册 Unregistered 4331" />
+                                    <Button layoutX="371.0" layoutY="4.0" mnemonicParsing="false" text="账户未授权 Unauthorization 4332" />
+                                    <Button layoutX="6.0" layoutY="29.0" mnemonicParsing="false" text="账户被禁用 Bedisabled 4333" />
+                                    <Button layoutX="182.0" layoutY="29.0" mnemonicParsing="false" text="账户已过期 DatePassed 4334" />
+                                    <Button layoutX="362.0" layoutY="29.0" mnemonicParsing="false" text="余额不足 NoEnoughMoney 4335" />
+                                    <Button layoutX="6.0" layoutY="54.0" mnemonicParsing="false" text="车已入场 CarAlreadyIn 4336" />
+                                    <Button layoutX="182.0" layoutY="54.0" mnemonicParsing="false" text="车未入场 CarNotIn 4337" />
+                                    <Button layoutX="6.0" layoutY="79.0" mnemonicParsing="false" text="请入场停车 PleaseComeIn 433A" />
+                                    <Button layoutX="202.0" layoutY="79.0" mnemonicParsing="false" text="请入场停车，余期XXXXXX天 ComeIn_RemainDate 433B" />
+                                    <Button layoutX="6.0" layoutY="104.0" mnemonicParsing="false" text="请入场停车，余额SXXXXX.xx元 ComeIn_RemainMoney 434C" />
+                                    <Button layoutX="362.0" layoutY="104.0" mnemonicParsing="false" text="祝你一路平安 Goodbye 433D" />
+                                    <Button layoutX="6.0" layoutY="129.0" mnemonicParsing="false" text="祝你一路平安，余期XXXXXX天 GoodBye_RemainDate 433E" />
+                                    <Button layoutX="6.0" layoutY="154.0" mnemonicParsing="false" text="祝你一路平安，余额SXXXXX.xx元 GoodBye_RemainMoney 433F" />
+                                    <Button layoutX="336.0" layoutY="54.0" mnemonicParsing="false" text="请交费：SXXXXX.xx元 PleasePay 4342" />
+                                    <Button layoutX="213.0" layoutY="179.0" mnemonicParsing="false" text="Button" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="功能6 Function6">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton layoutX="188.0" layoutY="7.0" mnemonicParsing="false" selected="true" text="网络 TCP/IP" />
+            <Label layoutX="5.0" layoutY="7.0" text="通讯方式 CommunicationType :" />
+            <TextField layoutX="280.0" layoutY="4.0" prefHeight="23.0" prefWidth="115.0" promptText="192.168.1.131" text="192.168.1.131" />
+            <RadioButton layoutX="405.0" layoutY="7.0" mnemonicParsing="false" text="串口 SerialPort" />
+            <TextField layoutX="516.0" layoutY="4.0" prefHeight="23.0" prefWidth="65.0" promptText="COM0-16" text="COM1" />
+            <Button layoutX="583.0" layoutY="4.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="113.0" text="连接 Connect" />
+            <Label layoutX="700.0" layoutY="8.0" prefHeight="15.0" prefWidth="78.0" text="未连接 Null" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
